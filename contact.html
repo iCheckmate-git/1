@@ -53,7 +53,10 @@
                 </div>
             </div>
         </nav>
-        <nav class="navigation">
+        <div class="overlay"></div>
+         <nav class="navigation">
+             <a href="" class="back" style="display: none;"><i class="fas fa-angle-left"></i></a>
+             <a href="" class="closes"><i class="fas fa-times"></i></i></a>
             <div class="container">
                 <div class="flex">
                     <ul>
@@ -126,9 +129,10 @@
             <div class="container">
                 <h1>Контакти</h1>
             </div>
-            <div id="map"></div>
-            <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyAY0p4CFlUHw7vMJXdOM6kC-qdBWsBNX8A", v: "beta"});</script>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.4553797743906!2d35.04836947198377!3d48.46697827422834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2e821ffe621%3A0x1a92a90b06f12774!2z0YPQuy4g0KXQsNGA0YzQutC-0LLRgdC60LDRjywgMTUsINCU0L3QtdC_0YAsINCU0L3QtdC_0YDQvtC_0LXRgtGA0L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCA0OTAwMA!5e0!3m2!1sru!2sua!4v1713018887066!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        
             <section class="main_contact">
                 <div class="container grid">
                     <div class="item">
