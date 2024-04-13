@@ -3401,14 +3401,17 @@ footer {
 
 @media screen and (max-width: 760px) {
     header {
+       &.home {
         margin-bottom: 359px;
+       }
         .header-top__wrap {
             display: none;
-        } 
+        }  
     }
+    
     .header-hero__slider img {
-        -o-object-fit: cover;
-        object-fit: unset;
+        -o-object-fit: cover; 
+        object-fit: unset; 
         height: auto;
         height: auto;
     }
