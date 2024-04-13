@@ -3400,9 +3400,22 @@ footer {
 }
 
 @media screen and (max-width: 760px) {
-    header .header-top__wrap {
-        display: none;
-    } 
+    header {
+        margin-bottom: 359px;
+        .header-top__wrap {
+            display: none;
+        } 
+    }
+    .header-hero__slider img {
+        -o-object-fit: cover;
+        object-fit: unset;
+        height: auto;
+        height: auto;
+    }
+    .header-hero .order-evacuattor {
+        position: absolute;
+        bottom: -378px;
+    }
     h1 {
         font-size: 36px;
     }
