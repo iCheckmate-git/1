@@ -1,5 +1,72 @@
 $(document).ready(function(){
 
+const gumv  = document.querySelector('.mobile_btn');
+const clo = document.querySelector('.navigation .closes');
+const overlay = document.querySelector('.overlay');
+gumv.addEventListener('click', function(e){
+  e.preventDefault();
+  const navigation = document.querySelector('.navigation');
+  navigation.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  overlay.classList.add('active');
+
+ 
+  const mobile_menu_items = document.querySelectorAll('.navigation.active li');
+
+  mobile_menu_items.forEach((obj) => {
+    obj.addEventListener('click', function(e) {
+      
+      
+      const subMenu = obj.querySelector('  ul');
+      if (subMenu) {
+        const link = obj.querySelector('a:first-child'); // Выбираем первую ссылку внутри элемента li
+        if (link === e.target) {
+          e.preventDefault(); // Предотвращаем стандартное действие только для этой ссылки
+        }
+        this.classList.add('active');
+        obj.parentNode.classList.add('show');
+        document.querySelector('.back').style.display = 'block';
+        document.querySelector('.closes').style.display = 'none';  
+      }
+      
+      
+    });
+  });
+
+  const backButton = document.querySelector('.back');
+  if (backButton) {
+    backButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      const activeItems = document.querySelectorAll('.navigation.active li.active');
+      const closeButton = document.querySelector('.closes');
+      if (activeItems.length > 0) {
+        const lastActiveItem = activeItems[activeItems.length - 1];
+        lastActiveItem.classList.remove('active');
+        lastActiveItem.parentNode.classList.remove('show');
+      } 
+      const uls = document.querySelectorAll('.navigation ul');
+      let hasActiveMenu = false;
+      uls.forEach(ul => {
+        if (ul.classList.contains('show')) {
+          hasActiveMenu = true;
+        }
+      });
+      if (!hasActiveMenu) {
+        backButton.style.display = 'none';
+        closeButton.style.display = 'block';
+      }
+    });
+  }
+
+
+})
+clo.addEventListener('click', function(e){
+  e.preventDefault();
+  this.parentNode.classList.remove('active');
+  document.body.style.overflow = '';
+  overlay.classList.remove('active');
+})
+
   // Проверка наличия элементов .faq li перед выполнением операций с ними
   const faq_items = document.querySelectorAll('.faq li');
   if (faq_items.length > 0) {
@@ -105,4 +172,6 @@ $(document).ready(function(){
       dots: false,
       // autoWidth: true
   });
+
+
 });
