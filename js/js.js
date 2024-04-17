@@ -1,4 +1,9 @@
+
+$('.reviews__slider, .header-hero__slider').owlCarousel({
+  items: 1, loop: false, margin: 0, nav: true, navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'], dots: false,
+});
 $(document).ready(function(){
+
 
 const gumv  = document.querySelector('.mobile_btn');
 const clo = document.querySelector('.navigation .closes');
@@ -163,15 +168,6 @@ clo.addEventListener('click', function(e){
     }
   }
 
-  $('.reviews__slider, .header-hero__slider').owlCarousel({
-      items: 1,
-      loop: false,
-      margin: 0,
-      nav: true,
-      navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-      dots: false,
-      // autoWidth: true
-  });
 
 
 });
