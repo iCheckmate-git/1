@@ -1215,14 +1215,21 @@ nav {
         span.name {
             display: table;
             margin-right: 11px;
+            font-family: var(--font-Roboto);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.75em;
+            color: #79787F;
         }
 
         a {
+            font-family: var(--font-Roboto);
             font-size: 12px;
             font-weight: 400;
             text-transform: uppercase;
-            line-height: 1.75em;
-            color: var(--color-text);
+            text-decoration: none;
+            line-height: 1.75em;    
+            color: #79787F;
 
             &:hover {
                 text-decoration: underline;
@@ -1233,16 +1240,17 @@ nav {
             font-size: 12px;
             font-weight: 400;
             text-transform: uppercase;
-            text-decoration: underline;
             line-height: 1.75em;
         }
 
         .br_title {
+            font-family: var(--font-Roboto);
             font-size: 12px;
             font-weight: 400;
             text-transform: uppercase;
             text-decoration: underline;
             line-height: 1.75em;
+            color: #79787F;
         }
     }
 }
@@ -3437,6 +3445,7 @@ footer {
                 }
                 li {
                     position: unset;
+                    margin-bottom: 10px;
                     &:hover {
 
                     }
@@ -3451,6 +3460,12 @@ footer {
                     }
                     a {
                         color: var(--color-h3);
+                        font-size: 13px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        line-height: 2em;
+                        letter-spacing: 0.52px;
+
                     }
                     &.active {
                         

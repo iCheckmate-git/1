@@ -1037,13 +1037,20 @@ nav .search {
 .breadcrumbs .container span.name {
   display: table;
   margin-right: 11px;
+  font-family: var(--font-Roboto);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #79787F;
 }
 .breadcrumbs .container a {
+  font-family: var(--font-Roboto);
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
+  text-decoration: none;
   line-height: 1.75em;
-  color: var(--color-text);
+  color: #79787F;
 }
 .breadcrumbs .container a:hover {
   text-decoration: underline;
@@ -1052,15 +1059,16 @@ nav .search {
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
-  text-decoration: underline;
   line-height: 1.75em;
 }
 .breadcrumbs .container .br_title {
+  font-family: var(--font-Roboto);
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: underline;
   line-height: 1.75em;
+  color: #79787F;
 }
 
 .services-page .main_contact {
@@ -3050,6 +3058,7 @@ nav.mobile {
   }
   nav.navigation.active ul li {
     position: unset;
+    margin-bottom: 10px;
   }
   nav.navigation.active ul li > ul.sub-menu {
     opacity: 0;
@@ -3062,6 +3071,11 @@ nav.mobile {
   }
   nav.navigation.active ul li a {
     color: var(--color-h3);
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 2em;
+    letter-spacing: 0.52px;
   }
   nav.navigation.active ul li.active > ul.sub-menu {
     background: #FFF;
